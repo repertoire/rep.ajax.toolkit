@@ -16,6 +16,10 @@ src/*
 .hgignore
 .hg/*
 .svn/*
-gems/
-!gems/cache/
+*.gem
+gems/gems/*
+gems/specifications/*
+gems/dirs/*
+gems/environment.rb
+*.gem
 merb_profile_results
