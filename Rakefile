@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake/gempackagetask'
 
 GEM_NAME = "rep.ajax.toolkit"
-GEM_VERSION = "0.1.1"
+GEM_VERSION = "0.1.2"
 AUTHOR = "Christopher York"
 EMAIL = "yorkc@mit.edu"
 HOMEPAGE = "http://hyperstudio.mit.edu"
