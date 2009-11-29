@@ -18,3 +18,10 @@ begin
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install jeweler"
 end
+
+begin
+  require 'repertoire-assets'
+  Repertoire::Assets::Tasks.new(:gem_excludes => ["jquery"])
+rescue LoadError
+  puts "Repertoire assets not available.  Install it with: sudo gem install repertoire-assets"
+end
