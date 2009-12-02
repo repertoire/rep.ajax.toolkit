@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rep.ajax.toolkit}
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christopher York"]
-  s.date = %q{2009-11-29}
+  s.date = %q{2009-12-02}
   s.description = %q{Hyperstudio ajax tools}
   s.email = %q{yorkc@mit.edu}
   s.extra_rdoc_files = [
@@ -29,7 +29,11 @@ Gem::Specification.new do |s|
      "public/images/rep.ajax-validate/spinner_sm.gif",
      "public/javascripts/rep.ajax-validate.js",
      "public/javascripts/rep.hint.js",
-     "public/javascripts/rep.widget.js",
+     "public/javascripts/rep.widgets.js",
+     "public/javascripts/rep.widgets/events.js",
+     "public/javascripts/rep.widgets/global.js",
+     "public/javascripts/rep.widgets/model.js",
+     "public/javascripts/rep.widgets/widget.js",
      "public/stylesheets/rep.ajax-validate.css",
      "rep.ajax.toolkit.gemspec"
   ]
