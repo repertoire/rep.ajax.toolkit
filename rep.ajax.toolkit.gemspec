@@ -5,16 +5,17 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rep.ajax.toolkit}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christopher York"]
-  s.date = %q{2009-12-02}
+  s.date = %q{2009-12-08}
   s.description = %q{Hyperstudio ajax tools}
   s.email = %q{yorkc@mit.edu}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README"
+     "README",
+     "TODO"
   ]
   s.files = [
     ".gitignore",

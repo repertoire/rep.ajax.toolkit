@@ -76,7 +76,8 @@ repertoire.widget = function(selector, options) {
         process_injectors(markup, options.injectors, arguments[0]);
 
       // paint markup into the dom
-      $widget.html(markup);
+      if (markup)
+        $widget.html(markup);
     };
 
     // start rendering
@@ -86,7 +87,7 @@ repertoire.widget = function(selector, options) {
   //
   // Render and return markup for this widget.
   //
-  // Two forms are possible:
+  // Three forms are possible:
   //
   // (1) Basic... just return a string or jquery object
   //
@@ -101,6 +102,9 @@ repertoire.widget = function(selector, options) {
   //       var markup = template_fn();
   //       return $(markup).find('.title').html('New Title');
   //     };
+  //
+  // (3) If you want to modify the DOM in place, do so
+  //     and return nothing.
   //
   self.render = function() {
     return $('<div class="rep"/>');      // namespace for all other widget css is 'rep'

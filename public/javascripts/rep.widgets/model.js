@@ -94,13 +94,18 @@ repertoire.model = function(options) {
   //
   // Format a webservice url, preferring options.url if possible
   //
-  self.default_url = function(default_parts) {
+  self.default_url = function(default_parts, ext) {
     var path_prefix = options.path_prefix || '';
-    var parts = default_parts.slice();
+    var parts       = default_parts.slice();
 
     parts.unshift(path_prefix);
-    return options.url || parts.join('/');
-  };
+    url = options.url || parts.join('/')
+
+    if (ext)
+      url += '.' + ext;
+
+    return url;
+  }
   
   //
   // Convert a structure of params to a URL query string suitable for use in an HTTP GET request, compliant with Merb's format.
