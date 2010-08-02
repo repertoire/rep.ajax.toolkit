@@ -7,8 +7,8 @@ begin
     s.email = "yorkc@mit.edu"
     s.homepage = "http://github.com/repertoire/rep.ajax.toolkit"
     s.authors = ["Christopher York"]
-    s.add_dependency('repertoire-assets', '~>0.1.0')
-    s.add_dependency('rep.jquery', '~>1.3.2')
+    s.add_dependency('repertoire-assets', '>=0.1.0')
+    s.add_dependency('rep.jquery', '>=1.3.2')
   end
   Jeweler::RubyforgeTasks.new do |rubyforge|
     rubyforge.doc_task = "yardoc"
@@ -21,7 +21,7 @@ end
 
 begin
   require 'repertoire-assets'
-  Repertoire::Assets::Tasks.new(:gem_excludes => ["jquery"])
+#  Repertoire::Assets::Tasks.new(:gem_excludes => ["jquery"])
 rescue LoadError
   puts "Repertoire assets not available.  Install it with: sudo gem install repertoire-assets"
 end
