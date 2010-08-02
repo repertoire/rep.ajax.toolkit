@@ -68,25 +68,29 @@ repertoire.model = function(options) {
   //   type:     type of data returned (e.g. 'json', 'html')
   //   callback: function to call with returned data
   //
-  self.fetch = function(params, url, type, callback, $elem) {
+  self.fetch = function(params, url, type, callback, $elem, async) {
+    if (async == null)
+      async = true;
+
     var spinnerClass = options.spinner || 'loading';
     if ($elem)
       $elem.addClass(spinnerClass);
     $.ajax({
-      url: url,
-      data: self.to_query_string(params),
-      type: 'GET',
+      async:    async,
+      url:      url,
+      data:     self.to_query_string(params),
+      type:     'GET',
       dataType: type,
       // content negotiation problems may require:
       /* beforeSend: function(xhr) { xhr.setRequestHeader("Accept", "application/json") } */
-      success: callback,
-      error:   function() {
-        if ($elem)
-          $elem.html(options.error || 'Could not load');
+      success:  callback,
+      error:    function(request, textStatus, errorThrown) {
+          if ($elem)
+            $elem.html(options.error || 'Could not load');
       },
       complete: function () {
-        if ($elem)
-          $elem.removeClass(spinnerClass);
+          if ($elem)
+            $elem.removeClass(spinnerClass);
       }
     });
   };
@@ -128,13 +132,34 @@ repertoire.model = function(options) {
         vs.push(self.to_query_string(v, (prefix.length > 0) ? (prefix + '[' + escape(k) + ']') : escape(k)));
       });
       // minor addition to merb: discard empty value lists { e.g. discipline: [] }
-      vs = vs.filter(function(x) { return x !== ""; });
+      vs = array_filter(vs, function(x) { return x !== ""; });
       return vs.join('&');
     } else {
       return prefix + '=' + escape(value);
     }
   };
-  
+
+  // Apparently IE doesn't support the filter function? -DD via Brett
+  var array_filter = function (thisArray, fun) {
+    var len = thisArray.length;
+      if (typeof fun != "function")
+        throw new TypeError();
+
+      var res = new Array();
+      var thisp = arguments[1];
+
+      for (var i = 0; i < len; i++) {
+        if (i in thisArray) {
+          var val = thisArray[i]; // in case fun mutates this
+          if (fun.call(thisp, val, i, thisArray)) 
+            res.push(val);
+	}
+      }
+
+      return res;
+  };
+
+    
   // end of model factory function
   return self;
 }
