@@ -129,13 +129,13 @@ repertoire.model = function(options) {
       return vs.join('&');
     } else if (typeof(value) == "object") {
       jQuery.each(value, function(k, v) {
-        vs.push(self.to_query_string(v, (prefix.length > 0) ? (prefix + '[' + escape(k) + ']') : escape(k)));
+        vs.push(self.to_query_string(v, (prefix.length > 0) ? (prefix + '[' + encodeURIComponent(k) + ']') : encodeURIComponent(k)));
       });
       // minor addition to merb: discard empty value lists { e.g. discipline: [] }
       vs = array_filter(vs, function(x) { return x !== ""; });
       return vs.join('&');
     } else {
-      return prefix + '=' + escape(value);
+      return prefix + '=' + encodeURIComponent(value);
     }
   };
 
