@@ -50,14 +50,15 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<repertoire-assets>, [">= 0.1.0"])
-      s.add_runtime_dependency(%q<rep.jquery>, [">= 1.3.2"])
+#      s.add_runtime_dependency(%q<rep.jquery>, [">= 1.3.2"])
     else
       s.add_dependency(%q<repertoire-assets>, [">= 0.1.0"])
-      s.add_dependency(%q<rep.jquery>, [">= 1.3.2"])
+#      s.add_dependency(%q<rep.jquery>, [">= 1.3.2"])
     end
   else
     s.add_dependency(%q<repertoire-assets>, [">= 0.1.0"])
-    s.add_dependency(%q<rep.jquery>, [">= 1.3.2"])
+#    s.add_dependency(%q<rep.jquery>, [">= 1.3.2"])
   end
+
 end
 
