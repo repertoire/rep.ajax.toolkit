@@ -1,5 +1,3 @@
-//= require <jquery>
-
 jQuery.fn.hint = function (blurClass) {
   if (!blurClass) { 
     blurClass = 'blur';

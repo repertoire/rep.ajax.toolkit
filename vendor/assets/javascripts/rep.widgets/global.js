@@ -8,8 +8,6 @@
 * Support: Firefox 3+ & Safari 4+.  IE emphatically not supported.
 */
 
-//= require <jquery>
-
 // claim a single global namespace, 'repertoire'
 repertoire = {};
 

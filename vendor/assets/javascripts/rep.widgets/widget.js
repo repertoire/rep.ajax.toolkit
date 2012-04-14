@@ -8,10 +8,6 @@
 * Support: Firefox 3+ & Safari 4+.  IE emphatically not supported.
 */
 
-//= require <jquery>
-
-//= require "global"
-
 //
 // Abstract class for ajax widgets
 //

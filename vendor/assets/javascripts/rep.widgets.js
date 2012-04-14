@@ -8,6 +8,7 @@
 * Support: Firefox 3+ & Safari 4+.  IE emphatically not supported.
 */
 
-//= require "rep.widgets/global"
-//= require "rep.widgets/widget"
-//= require "rep.widgets/model"
+//= require rep.widgets/global
+//= require rep.widgets/widget
+//= require rep.widgets/events
+//= require rep.widgets/model

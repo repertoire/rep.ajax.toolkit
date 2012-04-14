@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{rep.ajax.toolkit}
-  s.version = "0.3.1"
+  s.name = "rep.ajax.toolkit"
+  s.version = "0.3.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christopher York", "Dave Della Costa"]
-  s.date = %q{2011-10-11}
-  s.description = %q{Hyperstudio ajax tools}
-  s.email = %q{yorkc@mit.edu}
+  s.date = "2012-04-14"
+  s.description = "Hyperstudio ajax tools"
+  s.email = "dfd@mit.edu"
   s.extra_rdoc_files = [
     "LICENSE",
     "README",
@@ -24,26 +24,14 @@ Gem::Specification.new do |s|
     "TODO",
     "VERSION",
     "lib/rep.ajax.toolkit.rb",
-    "public/images/rep.ajax-validate/green_check.png",
-    "public/images/rep.ajax-validate/red_cross.png",
-    "public/images/rep.ajax-validate/spinner_sm.gif",
-    "public/javascripts/rep.ajax-validate.js",
-    "public/javascripts/rep.hint.js",
-    "public/javascripts/rep.widgets.js",
-    "public/javascripts/rep.widgets/events.js",
-    "public/javascripts/rep.widgets/global.js",
-    "public/javascripts/rep.widgets/model.js",
-    "public/javascripts/rep.widgets/widget.js",
-    "public/stylesheets/rep.ajax-validate.css",
     "rep.ajax.toolkit.gemspec"
   ]
-  s.homepage = %q{http://github.com/repertoire/rep.ajax.toolkit}
+  s.homepage = "http://github.com/repertoire/rep.ajax.toolkit"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Hyperstudio ajax tools}
+  s.rubygems_version = "1.8.10"
+  s.summary = "Hyperstudio ajax tools"
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then

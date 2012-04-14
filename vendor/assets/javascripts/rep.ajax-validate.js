@@ -1,9 +1,3 @@
-//= require <jquery>
-//= require <jquery/form>
-
-//= require "../stylesheets/rep.ajax-validate.css"
-//= provide "../images/rep.ajax-validate/*"
-
 /*
 * Repertoire incremental form validation via ajax
 *

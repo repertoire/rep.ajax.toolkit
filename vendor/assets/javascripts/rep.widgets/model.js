@@ -8,12 +8,6 @@
 * Support: Firefox 3+ & Safari 4+.  IE emphatically not supported.
 */
 
-//= require "global"
-//= require "widget"
-//= require "events"
-
-//= require <jquery>
-
 //
 // Abstract model for ajax widgets.  This class includes convenience methods for listening to
 // events on models, for jquery ajax calls, and for param encoding in Merb's style.

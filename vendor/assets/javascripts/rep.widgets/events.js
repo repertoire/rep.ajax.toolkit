@@ -8,10 +8,6 @@
 * Support: Firefox 3+ & Safari 4+.  IE emphatically not supported.
 */
 
-//= require "global"
-
-//= require <jquery>
-
 //
 // Mixin that adds functionality for event listening to an arbitrary javascript object.
 //
